@@ -12,7 +12,7 @@ def index(request):
 
 @login_required
 def special(request):
-    return HttpResponse("You are logged in, Nice!")
+    return HttpResponse("You are logged in Now!")
 
 @login_required
 def user_logout(request):
@@ -42,7 +42,6 @@ def register(request):
             # Update with Hashed password
             user.save()
 
-            # Now we deal with the extra info!
 
             # Can't commit yet because we still need to manipulate
             profile = profile_form.save(commit=False)
